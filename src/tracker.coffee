@@ -99,11 +99,10 @@ class VASTTracker extends EventEmitter
         @skipDelay = duration if typeof duration is 'number'
 
     # To be called when the video started to log the impression
-    load: ->
+    impress: ->
         unless @impressed
             @impressed = yes
             @trackURLs @ad.impressionURLTemplates
-            @track "creativeView"
 
     # To be called when an error happen with the proper error code
     errorWithCode: (errorCode) ->
